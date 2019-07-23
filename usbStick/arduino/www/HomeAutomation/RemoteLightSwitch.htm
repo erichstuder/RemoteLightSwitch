@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Remote Light Switch</title>
+	<script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<H1>Remote Light Switch</H1>
+
+	<form name="msgform" onSubmit="return sendMsgOn()">
+		<input type="submit" value="on" >
+	</form>
+
+	<form name="msgform" onSubmit="return sendMsgOff()">
+		<input type="submit" value="off" >
+	</form>
+
+	<script type="text/javascript">       
+		function sendMsgOn() {   
+			$.get('/arduino/msg/on/');
+			return false;
+		}
+		
+		function sendMsgOff() {   
+			$.get('/arduino/msg/off/');
+			return false;
+		}
+	</script>
+</body>

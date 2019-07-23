@@ -1,0 +1,1 @@
+diesen ordner auf einen USB Stick kopieren und am YUN einstecken
